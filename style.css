@@ -1,0 +1,254 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f7f3ef;
+    color:#333;
+    line-height:1.6;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(8px);
+    z-index:999;
+}
+
+nav h2{
+    color:#fff;
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:#fff;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#f7c873;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    color:white;
+    padding:20px;
+}
+
+.overlay h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.overlay p{
+    max-width:650px;
+    margin:auto;
+    margin-bottom:30px;
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:#b87333;
+    color:white;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#8d5b2d;
+}
+
+/* SECTION */
+
+section{
+    padding:80px 8%;
+}
+
+section h2{
+    text-align:center;
+    color:#5a3a22;
+    margin-bottom:35px;
+    font-size:36px;
+}
+
+/* ABOUT */
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:17px;
+}
+/* MENU */
+
+.menu{
+    background:#fff;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fafafa;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin:15px 0 10px;
+    color:#5a3a22;
+}
+
+.card p{
+    color:#666;
+}
+
+/* GALERI */
+
+.gallery{
+    background:#f7f3ef;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* KONTAK */
+
+.contact{
+    background:white;
+    text-align:center;
+}
+
+.contact iframe{
+    width:100%;
+    height:350px;
+    margin-top:25px;
+    border:0;
+    border-radius:15px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#5a3a22;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    padding:15px;
+}
+
+nav ul{
+    margin-top:15px;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.overlay h1{
+    font-size:42px;
+}
+
+.overlay p{
+    font-size:17px;
+}
+
+section{
+    padding:70px 20px;
+}
+
+.menu-grid,
+.gallery-grid{
+    grid-template-columns:1fr;
+}
+
+.contact iframe{
+    height:250px;
+}
+
+}
